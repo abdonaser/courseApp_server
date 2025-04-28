@@ -6,13 +6,13 @@ Welcome to the backend server of **CourseApp** — a Node.js API designed to man
 
 ## 🚀 Features
 
-- 🔐 User Authentication (Sign up, Login, Reset Password)
-- 📚 Course Management (Create, Edit, Delete Courses)
--    Users Management (Create, Edit, Delete Courses)
-- 📧 Email Verification & Password Reset Emails
-- 🌍 RESTful API following best practices
-- 🛡️ Secure with environment variables
-- 📨 Nodemailer Integration for sending Emails
+🔐 User Authentication (Sign up, Login, Reset Password)
+👥 Users Management (Create, Edit, Delete Users)
+📚 Course Management (Create, Edit, Delete Courses)
+📧 Email Verification & Password Reset Emails
+🌍 RESTful API following best practices
+🛡️ Secure with environment variables
+📨 Nodemailer Integration for sending Emails
 
 ---
 
@@ -41,14 +41,13 @@ Welcome to the backend server of **CourseApp** — a Node.js API designed to man
 git clone https://github.com/abdonaser/courseApp_server.git
 cd courseApp_server
 npm install
-````
+```
 
 ---
 
 ## 🧪 Running Locally
 
 1. Create a `.env` file in the root directory and add the following environment variables:
-    
 
 ```env
 PORT=3000
@@ -84,7 +83,4 @@ For major changes, please open an issue first to discuss what you would like to 
 ## 💬 Contact
 
 - **Developer:** [Abdo Naser](https://github.com/abdonaser)
-    
 - **LinkedIn:** [Abdelrahman Naser Muhammed](https://www.linkedin.com/in/abdelrahman-naser-muhammed)
-    
- 
