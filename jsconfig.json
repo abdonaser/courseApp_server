@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "baseUrl": ".", // base path is the root of the project
+    "paths": {
+      "@utils/*": [
+        "./utils/*"
+      ],
+      "@models/*": [
+        "./models/*"
+      ],
+      "@middlewares/*": [
+        "./middlewares/*"
+      ]
+    }
+  },
+  "include": [
+    "./**/*.js",
+    "./**/**/*.js",
+    "./*.js",
+    "./*.js"
+  ]
+}

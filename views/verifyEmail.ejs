@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify Email</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 15px;
+      max-width: 450px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+      animation: fadeIn 0.7s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #6a11cb;
+    }
+
+    .title {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid #6a11cb;
+      width: 50%;
+      margin: 20px auto;
+    }
+
+    .code-section {
+      background: #6a11cb;
+      padding: 20px;
+      border-radius: 10px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .code-section h3 {
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .code {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 15px 0;
+      letter-spacing: 3px;
+    }
+
+    .expires {
+      font-size: 14px;
+      color: #ffe8e8;
+    }
+
+    .footer {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 20px 15px;
+      }
+
+      .logo {
+        font-size: 28px;
+      }
+
+      .title {
+        font-size: 20px;
+      }
+
+      .code {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="logo">courseApp</div>
+
+    <div class="title">Verify your Email, <%= firstName %>!</div>
+
+    <hr>
+
+    <div class="code-section">
+      <h3>Enter the following code to verify your email:</h3>
+      <div class="code"><%= code %></div>
+      <div class="expires">(Only valid for 10 minutes)</div>
+    </div>
+
+    <div class="footer">© 2025 courseApp. All rights reserved.</div>
+  </div>
+
+</body>
+</html>

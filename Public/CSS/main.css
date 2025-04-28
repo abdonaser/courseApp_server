@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Share+Tech+Mono&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Element */
+html {
+    font-family: "Share Tech Mono", serif;
+    font-size: 16px;
+    /* Base font size for easier scaling */
+    scroll-behavior: smooth;
+    /* Smooth scrolling */
+}
+
+/* Body Styling */
+body {
+    min-height: 100vh;
+    background-color: #000;
+    color: whitesmoke;
+    display: flex;
+    /* Center content flexibly */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    /* Space between elements */
+    padding: 2rem;
+    line-height: 1.6;
+    /* Improve readability */
+    text-align: center;
+    /* Center align text for better aesthetics */
+}
+
+/* Heading Styles */
+h1 {
+    border: 2px solid #fff;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    /* Slight spacing for better readability */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition on hover */
+    background: linear-gradient(90deg, #ff5733, #ffbd33);
+    /* Gradient background */
+    color: #000;
+    border-radius: 8px;
+    /* Slightly rounded corners */
+}
+
+/* Heading Hover Effect */
+h1:hover {
+    background: linear-gradient(90deg, #33ff57, #3385ff);
+    /* Color shift on hover */
+    color: #fff;
+    transform: scale(1.05);
+    /* Slight zoom effect */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    /* Glow effect */
+}
+
+/* Additional Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    background: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #ff5733;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(255, 87, 51, 0.5);
+}
