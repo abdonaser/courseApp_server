@@ -6,13 +6,13 @@ Welcome to the backend server of **CourseApp** — a Node.js API designed to man
 
 ## 🚀 Features
 
-🔐 User Authentication (Sign up, Login, Reset Password)
-👥 Users Management (Create, Edit, Delete Users)
-📚 Course Management (Create, Edit, Delete Courses)
-📧 Email Verification & Password Reset Emails
-🌍 RESTful API following best practices
-🛡️ Secure with environment variables
-📨 Nodemailer Integration for sending Emails
+- 🔐 User Authentication (Sign up, Login, Reset Password)
+- 📚 Course Management (Create, Edit, Delete Courses)
+- 👥 Users Management (Create, Edit, Delete Users)
+- 📧 Email Verification & Password Reset Emails
+- 🌍 RESTful API following best practices
+- 🛡️ Secure with environment variables
+- 📨 Nodemailer Integration for sending Emails
 
 ---
 
