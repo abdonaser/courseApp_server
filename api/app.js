@@ -5,10 +5,11 @@ var cors = require('cors')
 const cookieParser = require('cookie-parser');
 const app = express()
 const PORT = process.env.PORT || 3000
-const connectDB = require('./config/dbConnection');
-const { ERROR } = require('./utils/json_status_text');
+const connectDB = require('../config/dbConnection');
+const { ERROR } = require('../utils/json_status_text');
 const path = require('path');
 const ejs = require('ejs');
+const serverless = require('serverless-http');
 
 //#region //MiddleWares------------------------------------------------------
 require('module-alias/register');
@@ -16,12 +17,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
 
 // Enable CORS with specified options to allow cross-origin requests
-const corsOptions = require('./config/corsOptions');
+const corsOptions = require('../config/corsOptions');
 app.use(cors(corsOptions));
 
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname + '/Public')));
-app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, '..', 'Public')));
+app.set('views', path.join(__dirname, '..', 'views'));
 app.set('view engine', 'ejs');
 //#endregion ------------------------------------------------------
 
@@ -29,14 +30,14 @@ app.set('view engine', 'ejs');
 //#region //' Handel All Routes
 
 // courses Routes
-const coursesRoutes = require('./routes/course.routes');
+const coursesRoutes = require('../routes/course.routes');
 app.use('/api/courses', coursesRoutes)
 
-const usersRoutes = require('./routes/user.routes')
+const usersRoutes = require('../routes/user.routes')
 app.use('/api/users', usersRoutes)
 
 
-const AuthRoutes = require('./routes/auth.routes')
+const AuthRoutes = require('../routes/auth.routes')
 app.use('/api/auth', AuthRoutes)
 
 //#endregion
@@ -83,9 +84,12 @@ const startServer = async () => {
     app.listen(3000, () => console.log('Server running on http://localhost:3000'));
 };
 
-startServer();
+// Only start server locally
+if (process.env.NODE_ENV !== 'production') {
+    startServer();
+}
 
-
+module.exports.handler = serverless(app); // Vercel will use this
 
 //#region  Server Creation
 // connectDB(); // Connect to the database
