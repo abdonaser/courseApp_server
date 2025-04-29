@@ -18,7 +18,6 @@ const verifyJWT = async (req, res, next) => {
     const decodedData = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
 
         if (err) {
-            console.log("errrrrr , -> ", err)
             const errorMessage = (err.name == "TokenExpiredError") ? tokenErrorMassages.expired : tokenErrorMassages.public;
             const error = appError.create(errorMessage, 403, ERROR)
             return next(error)

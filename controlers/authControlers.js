@@ -207,11 +207,8 @@ const login = asyncWrapper(
 const logout = asyncWrapper(
     async (req, res) => {
         const cookies = req.cookies;
-        console.log(req.cookies)
         // Check if the JWT cookie exists
         if (!cookies?.jwt) {
-            console.log("test -- ", req.cookies)
-
             return res.sendStatus(204); // No JWT cookie found; send a 204 No Content response
         }
 

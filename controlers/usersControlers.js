@@ -124,7 +124,6 @@ const updatePatchUser = asyncWrapper(
             return next(error)
         }
         const updateData = { ...req.body };
-        console.log("updateData -> ", updateData)
         if (!updateData || Object.keys(updateData).length === 0) {
             const error = appError.create("Please provide user data", 409, "FAIL");
             return next(error);
@@ -218,7 +217,6 @@ const updatePassword = asyncWrapper(
 const deleteUser = asyncWrapper(
     async (req, res, next) => {
         const { userId } = req.params;
-        console.log(req.params.userId)
         if (!userId) {
             const error = appError.create("please Provide userId", 409, FAIL)
             return next(error)
