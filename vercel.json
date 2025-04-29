@@ -2,13 +2,21 @@
   "version": 2,
   "functions": {
     "api/app.js": {
-      "includeFiles": ["views/**", "Public/**", "utils/**"]
+      "runtime": "nodejs18.x",
+      "includeFiles": [
+        "views/**",
+        "Public/**",
+        "utils/**",
+        "config/**",
+        "routes/**",
+        "models/**"
+      ]
     }
   },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/api/app.js"
+      "dest": "api/app.js"
     }
   ]
 }
