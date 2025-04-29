@@ -2,7 +2,14 @@
   "version": 2,
   "functions": {
     "api/app.js": {
-      "includeFiles": ["views/**", "Public/**", "utils/**", "config/**", "routes/**", "models/**"]
+      "includeFiles": [
+        "views/**",
+        "Public/**",
+        "utils/**",
+        "config/**",
+        "routes/**",
+        "models/**"
+      ]
     }
   },
   "routes": [
