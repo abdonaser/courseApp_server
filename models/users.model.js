@@ -95,6 +95,10 @@ const userSchema = mongoose.Schema(
         },
         accountVerifyCode: String,
         accountVerifyCodeExpires: Date,
+        avatar: {
+            type: String,
+            default: 'uploads/unknown.png'
+        }
     }
 )
 

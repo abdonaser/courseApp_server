@@ -34,7 +34,8 @@ const register = asyncWrapper(
             email,
             role: role || "user",
             password,
-            passwordConfirm
+            passwordConfirm,
+            avatar: req.file.filename
         }
         const newUser = await usersModel.create(userData)
 

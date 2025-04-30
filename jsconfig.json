@@ -12,7 +12,7 @@
       ],
       "@middlewares/*": [
         "./middlewares/*"
-      ]
+      ],
     }
   },
   "include": [

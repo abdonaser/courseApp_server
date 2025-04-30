@@ -13,8 +13,8 @@ const serverless = require('serverless-http');
 
 //#region //MiddleWares------------------------------------------------------
 require('module-alias/register');
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
 
 // Enable CORS with specified options to allow cross-origin requests
 const corsOptions = require('../config/corsOptions');
@@ -33,12 +33,17 @@ app.set('view engine', 'ejs');
 const coursesRoutes = require('../routes/course.routes');
 app.use('/api/courses', coursesRoutes)
 
+// Users Routes
 const usersRoutes = require('../routes/user.routes')
 app.use('/api/users', usersRoutes)
 
-
+// Auth Routes
 const AuthRoutes = require('../routes/auth.routes')
 app.use('/api/auth', AuthRoutes)
+
+// uploads Routes
+app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')))
+
 
 //#endregion
 

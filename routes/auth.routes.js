@@ -3,18 +3,19 @@ const { register, login,
     forgotPassword, resetPassword,
     verifyAccount, resendVerificationCode
 } = require('../controlers/authControlers')
-
 const { loginValidation, rgisterValidation,
     forgotPasswordValidation, resetPasswordValidation,
     verifyAccountValidation, resendVerificationCodeValidation
 } = require('../midelWares/Validations/usersSchema_validation')
-
+const upload = require('../helpers/uploadImages.js')
 const router = require('express').Router()
 
 
 
+
+
 router.route('/register')
-    .post(rgisterValidation(), register)
+    .post(upload.single('avatar'), rgisterValidation(), register)
 
 router.route('/verifyaccount')
     .post(verifyAccountValidation(), verifyAccount)
